@@ -1,19 +1,7 @@
-﻿// Demo.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
-//
-
-#include <iostream>
+﻿#include <iostream>
 #include "../TLog/TLog.h"
-#pragma comment(lib,"..\\Release\\TLog.lib")
-#include <corecrt_io.h>
-#include <Shlwapi.h>
-#include <time.h>
-#pragma comment(lib,"Shlwapi")
+#pragma comment(lib,"..\\TLog\\TLog.lib")
 
-UINT64 GetTimeStampS()  //返回秒
-{
-	time_t t = time(NULL);
-	return t;
-}
 
 int main(int argc, char *argv[])
 {
