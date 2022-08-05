@@ -1,6 +1,9 @@
 ﻿#include <iostream>
+
+#define USE_TLOG_DYNAMIC
+
 #include "../TLog/TLog.h"
-#pragma comment(lib,"..\\TLog\\TLog.lib")
+//#pragma comment(lib,"..\\TLog\\TLog.lib")
 
 
 int main(int argc, char *argv[])
@@ -18,8 +21,11 @@ int main(int argc, char *argv[])
 // 
 
 	//初始化
-	TLog_Init("./", "Demo", TLOG_LV_DEBUG , 2, bDebug);
-	TLog_Print("hello Tlog...", 1);
+	//int ret = TLog_Init("D:\\work_space\\TLog\\Release\\TLog.dll","./", "Demo", TLOG_LV_DEBUG , 2, bDebug);
+	int ret = TLog_Init("D:\\work_space\\TLog\\TLog\\TLog.dll", "./", "Demo", TLOG_LV_DEBUG, 2, bDebug);
+	printf("TLog_Init:%d\n", ret);
+	ret = TLog_Print("hello Tlog...", 1);
+	printf("TLog_Print:%d\n", ret);
 
 	//打印测试
 	TLog_Print(u8"hello tlog...测试", TLOG_LV_DEBUG);
