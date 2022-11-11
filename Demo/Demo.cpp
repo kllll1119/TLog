@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 
 	//初始化
 	//int ret = TLog_Init("D:\\work_space\\TLog\\Release\\TLog.dll","./", "Demo", TLOG_LV_DEBUG , 2, bDebug);
-	int ret = TLog_Init("D:\\work_space\\TLog\\TLog\\TLog.dll", "./", "Demo", TLOG_LV_DEBUG, 2, bDebug);
+	int ret = TLog_Init(".\\TLog.dll", "./", "Demo", TLOG_LV_DEBUG, 2, bDebug);
 	printf("TLog_Init:%d\n", ret);
 	ret = TLog_Print("hello Tlog...", 1);
 	printf("TLog_Print:%d\n", ret);
